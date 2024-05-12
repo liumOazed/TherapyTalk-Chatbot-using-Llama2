@@ -11,6 +11,7 @@ conda create -n mindbot python=3.8 -y
 3. Now run ```conda create -n yourenvname ```
 4. Now activate the env by using ```conda activate yourenvname```
 5. If you face any conda init error simply run ```conda init bash ``` and close the git bash from your vscode and rerun step 4
+6. Run ```pip install -r requirements.txt ```
 
 ### requirements explanation:
 1. ctransformers is needed because I will run this model in cpu so we need ctransformers to load the quantized model. and also I will be using langchain so that's why this package is needed.
