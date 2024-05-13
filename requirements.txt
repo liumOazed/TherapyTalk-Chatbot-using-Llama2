@@ -3,5 +3,11 @@ sentence-transformers==2.2.2
 pinecone-client
 langchain==0.0.225
 langchain_pinecone
+pdfplumber
+spacy
+sklearn
+gensim
+nltk
+transformers
 flask
 pypdf
