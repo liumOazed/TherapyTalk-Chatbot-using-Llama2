@@ -5,3 +5,4 @@ langchain==0.0.225
 langchain_pinecone
 flask
 pypdf
+-e . 
