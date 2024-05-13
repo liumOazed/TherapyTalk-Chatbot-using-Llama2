@@ -38,7 +38,7 @@ class PineconeRetriever(BaseRetriever, BaseModel):
         super().__init__(pinecone_vector_store=pinecone_vector_store, **data)
 
     def _get_relevant_documents(self, query: str) -> List[Document]:
-        return self.pinecone_vector_store.similarity_search(query)
+        return self.pinecone_vector_store.similarity_search(query, k=2)
 
     async def _aget_relevant_documents(self, query: str) -> List[Document]:
-        return self.pinecone_vector_store.similarity_search(query)
+        return self.pinecone_vector_store.similarity_search(query, k=2)
