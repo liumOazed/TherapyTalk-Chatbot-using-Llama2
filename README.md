@@ -27,7 +27,7 @@ llama-2-7b-chat.ggmlv3.q4_0.bin from here: https://huggingface.co/TheBloke/Llama
 from here: https://app.pinecone.io/
 
 ## Testing the Limits of the entire RAG pipeline
-- We've tested around ~102 pages of PDF file(4.2MB) to perform summarization, NER and LDA(Topic Modeler) to workout the `main_query` and `context_queries` in json format which took around 13mins 37seconds.
+- We've tested around ~102 pages of PDF file(4.2MB) to perform summarization, NER and LDA(Topic Modeler) to workout the `main_query` and `context_queries` in json format which took around 13mins 37seconds on a T4 GPU of 15GiB.
 - Then the json is being feeded into the Llama2 model for question-answering to check the performance.
 - The performance is much more better with the RAG modeling than just feeding the complete RAW pdf file into the Llama2.
 
