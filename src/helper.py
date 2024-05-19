@@ -4,16 +4,14 @@ from langchain.embeddings import HuggingFaceEmbeddings # with this we can conver
 from langchain_pinecone import PineconeVectorStore
 import json
 
-# Extract data from pdf and convert to JSON
+# Extract data from pdf
 def load_pdf(data):
-    loader = DirectoryLoader(data, glob="*.pdf", loader_cls=PyPDFLoader)
-    documents = []
-    for pdf_file in loader.load():
-        pdf_data = {}
-        pdf_data['main_query'] = pdf_file.metadata.get('main_query', '')  # Access metadata directly
-        pdf_data['context_queries'] = [pdf_file.page_content]  # Access page content directly
-        documents.append(pdf_data)
-    return json.dumps(documents)
+    loader= DirectoryLoader(data,
+                    glob="*.pdf",
+                    loader_cls=PyPDFLoader)
+    
+    documents = loader.load()
+    return documents
 
 
 # Create text chunks
