@@ -16,7 +16,7 @@ conda create -n mindbot python=3.8 -y
 ### Project Requirements Explanation:
 1. Ctransformers is needed because I will run this model in cpu so we need ctransformers to load the quantized model. and also I will be using langchain so that's why this package is needed.
 2. Sentence-Transformer is for embedding purpose. It's opensource and free.
-3. Pinecone for the vecor database.  
+3. Pinecone for the vector database.  
 4. Langchain - A framework that empowers developers to create data-aware and agentic applications using language models.
 5. Python Flask for front-end development
 
@@ -30,4 +30,3 @@ from here: https://app.pinecone.io/
 - We've tested around ~102 pages of PDF file(4.2MB) to perform summarization, NER and LDA(Topic Modeler) to workout the `main_query` and `context_queries` in json format which took around 13mins 37seconds on a T4 GPU of 15GiB.
 - Then the json is being feeded into the Llama2 model for question-answering to check the performance.
 - The performance is much more better with the RAG modeling than just feeding the complete RAW pdf file into the Llama2.
-
