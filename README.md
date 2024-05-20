@@ -14,11 +14,11 @@ conda create -n mindbot python=3.8 -y
 6. Run ```pip install -r requirements.txt ```
 
 ### Project Requirements Explanation:
-1. ctransformers is needed because I will run this model in cpu so we need ctransformers to load the quantized model. and also I will be using langchain so that's why this package is needed.
-2. sentence-transformer is for embedding purpose. it's opensource and free.
+1. Ctransformers is needed because I will run this model in cpu so we need ctransformers to load the quantized model. and also I will be using langchain so that's why this package is needed.
+2. Sentence-Transformer is for embedding purpose. It's opensource and free.
 3. Pinecone for the vecor database.  
-4. langchain  a framework that empowers developers to create data-aware and agentic applications using language models.
-5. flask for front end development
+4. Langchain - A framework that empowers developers to create data-aware and agentic applications using language models.
+5. Python Flask for front-end development
 
 ## Download the llama2 quantized model from huggingface
 llama-2-7b-chat.ggmlv3.q4_0.bin from here: https://huggingface.co/TheBloke/Llama-2-7B-Chat-GGML/tree/main 
